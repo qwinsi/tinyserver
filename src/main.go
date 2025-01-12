@@ -112,6 +112,8 @@ func handler(respWriter http.ResponseWriter, req *http.Request) {
 			contentType = "text/css; charset=utf-8"
 		case ".js", ".mjs":
 			contentType = "application/javascript"
+		case ".svg":
+			contentType = "image/svg+xml"
 		default:
 			// No assignment here,
 			// just use the default Content-Type set by the `http` library in golang.
