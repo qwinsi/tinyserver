@@ -110,7 +110,7 @@ func handler(respWriter http.ResponseWriter, req *http.Request) {
 			contentType = "text/html; charset=utf-8"
 		case ".css":
 			contentType = "text/css; charset=utf-8"
-		case ".js":
+		case ".js", ".mjs":
 			contentType = "application/javascript"
 		default:
 			// No assignment here,
