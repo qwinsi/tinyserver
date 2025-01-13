@@ -105,15 +105,18 @@ func handler(respWriter http.ResponseWriter, req *http.Request) {
 
 	if err == nil {
 		statusCode = http.StatusOK
+		// https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types/Common_types
 		switch path.Ext(filePath) {
 		case ".html":
 			contentType = "text/html; charset=utf-8"
 		case ".css":
 			contentType = "text/css; charset=utf-8"
 		case ".js", ".mjs":
-			contentType = "application/javascript"
+			contentType = "application/javascript; charset=utf-8"
 		case ".svg":
-			contentType = "image/svg+xml"
+			contentType = "image/svg+xml; charset=utf-8"
+		case ".json":
+			contentType = "application/json; charset=utf-8"
 		default:
 			// No assignment here,
 			// just use the default Content-Type set by the `http` library in golang.
