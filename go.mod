@@ -1,3 +1,3 @@
-module github.com/qwinsi/tiny-server
+module github.com/qwinsi/tinyserver
 
 go 1.18

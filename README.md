@@ -2,13 +2,19 @@
 
 A simple HTTP server written in Golang.
 
-# Building
+## Installation
 
-```shell
-go build -o tinyserver  ./src/main.go
+```
+go install github.com/qwinsi/tinyserver@latest
 ```
 
-# Running
+Then you can run the server with:
+
+```shell
+tinyserver <directory>
+```
+
+## Usage
 
 Run `./tinyserver --help` to see the usage.
 
@@ -18,4 +24,14 @@ $ ./tinyserver --help
  Options: 
     -p, --port The port number which you want to bind on.
                          (If omitted, use 80 by default)
+```
+
+## Development
+
+1. Clone the repository.
+
+2. Build the binary.
+
+```shell
+go build -o tinyserver ./main.go
 ```
