@@ -140,7 +140,9 @@ func main() {
 	readConfig(&config)
 	http.HandleFunc("/", handler)
 
-	fmt.Printf("Server started at Port %d and Directory %s ... \n", config.Port, config.DocumentRoot)
+	fmt.Printf("Server started at Port %d and Directory %s\n", config.Port, config.DocumentRoot)
+	fmt.Printf("Visit http://localhost:%d/ \n", config.Port)
+
 	addr := fmt.Sprintf(":%d", config.Port)
 	err := http.ListenAndServe(addr, nil)
 	_, _ = fmt.Fprintln(os.Stderr, err)
